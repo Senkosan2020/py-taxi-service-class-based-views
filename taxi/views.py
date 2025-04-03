@@ -13,7 +13,7 @@ class CarListView(ListView):
     model = Car
     queryset = Car.objects.select_related("manufacturer").all()
     paginate_by = 5
-    ordering = ['model']
+    ordering = ["model"]
 
 
 class CarDetailView(DetailView):
@@ -23,7 +23,7 @@ class CarDetailView(DetailView):
 class DriverListView(ListView):
     model = Driver
     paginate_by = 5
-    ordering = ['license_number']
+    ordering = ["license_number"]
 
 
 class DriverDetailView(DetailView):
